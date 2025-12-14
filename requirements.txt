@@ -1,0 +1,14 @@
+streamlit
+google-generativeai
+pyngrok
+pillow
+pandas
+numpy
+requests
+chromadb
+langchain
+langchain-community
+sentence-transformers
+wordfreq
+streamlit-extras
+python-dotenv
