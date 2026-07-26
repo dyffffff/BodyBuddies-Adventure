@@ -8,6 +8,14 @@ relevant multi-organ mechanisms first, then uses those mechanisms as the scienti
 backbone for a four-scene story. Users can generate text only or request one to four
 illustrations.
 
+## Live Demo
+
+### [Open BodyBuddies Adventures](https://bodybuddies-adventure.streamlit.app/)
+
+No installation or API key is required. Open the link, describe an everyday
+activity, choose whether to include illustrations, and generate the body adventure
+directly in the browser.
+
 > Educational demo only. The generated content is not medical advice, diagnosis,
 > or treatment guidance.
 
@@ -51,116 +59,6 @@ flowchart LR
     E --> F[Four-scene story]
     F --> G[Optional illustrations]
 ```
-
-## Run Locally
-
-### Prerequisites
-
-- Python 3.11 or newer.
-- Git.
-- A Gemini API key created in Google AI Studio.
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/dyffffff/BodyBuddies-Adventure.git
-cd BodyBuddies-Adventure
-```
-
-### 2. Create and activate a virtual environment
-
-macOS or Linux:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-Windows PowerShell:
-
-```powershell
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
-
-After activation, the terminal prompt should normally include `(.venv)`.
-
-### 3. Install the dependencies
-
-```bash
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-```
-
-The installation includes Streamlit, the Gemini SDK, pandas, dotenv, and Pillow.
-No Chroma, sentence-transformers, Colab, or ngrok dependency is required.
-
-### 4. Configure the server-side API key
-
-macOS or Linux:
-
-```bash
-cp .env.example .env
-```
-
-Windows PowerShell:
-
-```powershell
-Copy-Item .env.example .env
-```
-
-Open the new `.env` file and replace the placeholder:
-
-```dotenv
-GEMINI_API_KEY=your_server_side_gemini_api_key
-```
-
-The remaining values in `.env` are optional. They control the text model, image
-model, input limit, illustration count, and session generation limit. Never
-commit `.env`; it is already excluded by `.gitignore`.
-
-### 5. Start the application
-
-```bash
-python -m streamlit run app.py
-```
-
-Streamlit should open the demo automatically. If it does not, visit:
-
-```text
-http://localhost:8501
-```
-
-Enter an everyday activity, select **Story only** or
-**Story + illustrations**, choose the number of images when applicable, and
-click the generate button.
-
-Press `Ctrl+C` in the terminal to stop the local server.
-
-### Troubleshooting
-
-- **`GEMINI_API_KEY is not configured`**: confirm `.env` exists in the repository
-  root and contains a valid key without quotation marks.
-- **Port 8501 is already in use**: start on another port with
-  `python -m streamlit run app.py --server.port 8502`.
-- **No matching physiology pathway**: try one of the activities suggested in the
-  sidebar; unsupported activities intentionally stop before story generation.
-- **Image generation fails**: first try **Story only** mode, then confirm that the
-  configured Gemini account can access the selected image model.
-
-## Configuration
-
-The default configuration uses:
-
-```text
-Text model:  gemini-2.5-flash
-Image model: gemini-3.1-flash-image
-Image size:  1K, 16:9
-Image limit: 4
-```
-
-Set deployment secrets in the hosting platform. Never commit `.env` or
-`.streamlit/secrets.toml`.
 
 ## Project Documentation
 
