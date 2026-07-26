@@ -125,3 +125,29 @@ See [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) for:
 
 This repository currently does not include an explicit open-source license.
 Contact the project owner before redistributing the code or ontology data.
+
+## Demo Screenshots
+
+### 1. Activity Input and Illustration Settings
+
+<p align="center">
+  <img src="demo_fig1.png" alt="BodyBuddies activity input, output mode, and illustration count controls" width="900">
+</p>
+
+### 2. Generated Story
+
+<p align="center">
+  <img src="demo_fig2.png" alt="Beginning of the generated four-scene physiology story" width="700">
+</p>
+
+### 3. Story Resolution and First Illustration
+
+<p align="center">
+  <img src="demo_fig3.png" alt="Story resolution and the first generated physiology illustration" width="700">
+</p>
+
+### 4. Additional Story Illustration
+
+<p align="center">
+  <img src="demo_fig4.png" alt="Second generated BodyBuddies physiology illustration" width="900">
+</p>
